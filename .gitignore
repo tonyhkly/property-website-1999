@@ -1,0 +1,29 @@
+/node_modules
+/dist
+/build
+/src/testReports/
+/application.properties
+/build-info.properties
+/logging.json
+
+## Gradle ##
+.gradletasknamecache
+.gradle/
+bin/
+
+## Intellij project files ##
+*.iml
+*.ipr
+*.iws
+.idea/
+
+## Ignore VS Code generated files (JLS files) ##
+.project
+.settings
+.classpath
+.vscode
+.history
+bin
+
+## Misc ##
+.DS_Store

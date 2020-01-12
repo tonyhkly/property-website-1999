@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Property Website 1999</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/shared-files/styles/generic.css">
+    <link rel="stylesheet" type="text/css" href="/pages/search-results/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="homepage">
+    <!-- Wikplayer https://www.wikplayer.com -->
+<script type="text/javascript" src="https://www.wikplayer.com/code.js" 
+data-config="{'skin':'skins/wikfull/funkyRed/skin.css','volume':50,'autoplay':true,'shuffle':false,'repeat':1,'showcomment':false,'marqueetexton':true,'placement':'top','showplaylist':false,'playlist':[{'title':'Wannabe','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgJLIiF15wjQ'},{'title':'I%27m%20Blue','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DY4QGPWLY-EM'},{'title':'No%20Scrubs','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DFrLequ6dUdM'},{'title':'Mambo%20No%205','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dbu7h_md33So'}]}" ></script>
+<!-- Wikplayer code end -->
+    <div class="logo">
+        <marquee behavior="scroll" direction="right" scrollamount="10">
+            <a href="/">
+                <img src="/shared-files/images/logo.png" width="300" /> </a>
+        </marquee>
+    </div>
+
+    <div class="navigation">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+            <img src="/shared-files/images/jump-to.png" height="30px" />
+            <a href="#properties_for_sale"> <img src="/shared-files/images/for sale.gif" width="100px" height="100px" />
+            </a>
+            <a href="#properties_to_rent"> <img src="/shared-files/images/to rent.gif" width="100px" height="100px" />
+            </a>
+            <a href="#overseas_properties"> <img src="/shared-files/images/island.gif" width="100px" height="100px" />
+            </a>
+            <a href="#new_homes"> <img src="/shared-files/images/new home.gif" width="100px" height="100px" /> </a> </a>
+        </marquee>
+    </div>
+
+    <div class="main">
+
+        <div class="sidebar">
+
+            <div class="alexWithEyes">
+                <section class="move-area">
+                    <div class='.container'>
+                        <div class='eye'></div>
+                        <div class='eye'></div>
+                    </div>
+                </section>
+                <img src="/shared-files/images/alex.png" width="200px" />
+            </div>
+
+            <div class="searchCriteriaContainer">
+                <p>Search Criteria</p>
+                <label>
+                    Location
+                    <input  class= "searchLocation"   type="text" />
+                </label>
+                <br />
+                <label>
+                    Radius
+                    <select>
+                        <option value="0.5 miles">0.5 miles</option>
+                        <option value="1 mile">1 mile</option>
+                        <option value="2 mile">2 miles</option>
+                        <option value="3 mile">3 miles</option>
+                    </select>
+                </label>
+                <br />
+                <label>
+                    Property type <br>
+                    <input type="checkbox" name="propertyType1" value="Terrace"> Terrace<br>
+                    <input type="checkbox" name="propertyType2" value="Detached"> Detached<br>
+                    <input type="checkbox" name="propertyType2" value="Bungalow" checked> Bungalow<br>
+                </label>
+                <label>
+                    <input type="submit" onclick = "search()" >
+                <label>
+            </div>
+
+            <br />
+            <br />
+
+            <p>At Property Website</p>
+            <img src="/shared-files/images/aimtoplease.gif" width="200px" />
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <center><small>Advertisement</small></center>
+            <br>
+            <img src="/shared-files/images/ask.jpg" width="250px" />
+            <br>
+            <br>
+            <a class="newspaperLinks"
+                href="https://www.insider.com/biggest-celebrity-scandals-stories-1990s-2019-6">Biggest Scandals of the
+                90s! </a>
+            <br>
+            <br>
+            <center><iframe
+                    src="http://free.timeanddate.com/clock/i72mdh2a/n136/szw110/szh110/hoc090/hbw6/cf100/hgr0/hccf00/hcw2/hcd88/fan2/fas20/facf00/fdi70/mqc000/mqs3/mql13/mqw4/mqd94/mhc000/mhs3/mhl13/mhw4/mhd94/mmc000/mml5/mmw1/mmd94/hwm2/hhs2/hhb18/hms2/hml80/hmb18/hmr7/hscf09/hss1/hsl90/hsr5"
+                    frameborder="0" width="200" height="200"></center></iframe>
+
+            <style>
+                canvas {
+                    background: black;
+                    border: 1px solid black;
+                }
+            </style>
+            <canvas width="250" height="250" id="game"></canvas>
+            <script>
+                var canvas = document.getElementById('game');
+                var context = canvas.getContext('2d');
+                var grid = 8;
+                var count = 0;
+
+                var snake = {
+                    x: 160,
+                    y: 160,
+
+                    // snake velocity. moves one grid length every frame in either the x or y direction
+                    dx: grid,
+                    dy: 0,
+
+                    // keep track of all grids the snake body occupies
+                    cells: [],
+
+                    // length of the snake. grows when eating an apple
+                    maxCells: 4
+                };
+                var apple = {
+                    x: 320,
+                    y: 320
+                };
+                // get random whole numbers in a specific range
+                // @see https://stackoverflow.com/a/1527820/2124254
+                function getRandomInt(min, max) {
+                    return Math.floor(Math.random() * (max - min)) + min;
+                }
+                // game loop
+                function loop() {
+                    requestAnimationFrame(loop);
+                    // slow game loop to 15 fps instead of 60 (60/15 = 4)
+                    if (++count < 4) {
+                        return;
+                    }
+                    count = 0;
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    // move snake by it's velocity
+                    snake.x += snake.dx;
+                    snake.y += snake.dy;
+                    // wrap snake position horizontally on edge of screen
+                    if (snake.x < 0) {
+                        snake.x = canvas.width - grid;
+                    }
+                    else if (snake.x >= canvas.width) {
+                        snake.x = 0;
+                    }
+
+                    // wrap snake position vertically on edge of screen
+                    if (snake.y < 0) {
+                        snake.y = canvas.height - grid;
+                    }
+                    else if (snake.y >= canvas.height) {
+                        snake.y = 0;
+                    }
+                    // keep track of where snake has been. front of the array is always the head
+                    snake.cells.unshift({ x: snake.x, y: snake.y });
+                    // remove cells as we move away from them
+                    if (snake.cells.length > snake.maxCells) {
+                        snake.cells.pop();
+                    }
+                    // draw apple
+                    context.fillStyle = 'red';
+                    context.fillRect(apple.x, apple.y, grid - 1, grid - 1);
+                    // draw snake one cell at a time
+                    context.fillStyle = 'green';
+                    snake.cells.forEach(function (cell, index) {
+
+                        // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
+                        context.fillRect(cell.x, cell.y, grid - 1, grid - 1);
+                        // snake ate apple
+                        if (cell.x === apple.x && cell.y === apple.y) {
+                            snake.maxCells++;
+                            // canvas is 400x400 which is 25x25 grids 
+                            apple.x = getRandomInt(0, 25) * grid;
+                            apple.y = getRandomInt(0, 25) * grid;
+                        }
+                        // check collision with all cells after this one (modified bubble sort)
+                        for (var i = index + 1; i < snake.cells.length; i++) {
+
+                            // snake occupies same space as a body part. reset game
+                            if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+                                snake.x = 160;
+                                snake.y = 160;
+                                snake.cells = [];
+                                snake.maxCells = 4;
+                                snake.dx = grid;
+                                snake.dy = 0;
+                                apple.x = getRandomInt(0, 25) * grid;
+                                apple.y = getRandomInt(0, 25) * grid;
+                            }
+                        }
+                    });
+                }
+                // listen to keyboard events to move the snake
+                document.addEventListener('keydown', function (e) {
+                    // prevent snake from backtracking on itself by checking that it's 
+                    // not already moving on the same axis (pressing left while moving
+                    // left won't do anything, and pressing right while moving left
+                    // shouldn't let you collide with your own body)
+
+                    // left arrow key
+                    if (e.which === 37 && snake.dx === 0) {
+                        snake.dx = -grid;
+                        snake.dy = 0;
+                    }
+                    // up arrow key
+                    else if (e.which === 38 && snake.dy === 0) {
+                        snake.dy = -grid;
+                        snake.dx = 0;
+                    }
+                    // right arrow key
+                    else if (e.which === 39 && snake.dx === 0) {
+                        snake.dx = grid;
+                        snake.dy = 0;
+                    }
+                    // down arrow key
+                    else if (e.which === 40 && snake.dy === 0) {
+                        snake.dy = grid;
+                        snake.dx = 0;
+                    }
+                });
+                // start the game
+                requestAnimationFrame(loop);
+            </script>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="/shared-files/images/forest.gif" />
+            <br>
+            <br>
+            <br>
+            <<a class="weatherwidget-io" href="https://forecast7.com/en/51d51n0d13/london/" data-label_1="LONDON"
+                data-label_2="WEATHER" data-font="Consolas" data-icons="Climacons Animated" data-theme="weather_one">
+                LONDON WEATHER</a>
+                <script>
+                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                </script>
+                <br>
+                <br>
+                <br>
+                <img src="/shared-files/images/long.gif" />
+        </div>
+
+        <div>
+
+            <div class="content">
+
+                <h1 class="PropertyForSale" id="properties_for_sale"> <img
+                        src="/shared-files/images/properties-for-sale.gif" height="75px" /> </h1>
+
+                <a href="/property-details" class="detailsLink">
+                    <div class="propertyCard christmasHome">
+                        <div><img src="/shared-files/images/xmas-house-640.gif" class="propertyImage" width="325px" />
+                        </div>
+                        <div>
+                            <p class="propertyPrice"> £250,000 </p>
+                            <p class="propertyAddress">Rudolph Lane </p>
+                            <p> Santa's Grotto will not fail to amaze from first sight. The 800m2 property has a private
+                                road leading up to it creating a wonderful privacy whilst being in the heart of the
+                                North
+                                Pole. As you guide your reindeer up the road you with be impressed by the sheer size and
+                                beauty of the building. Heated stairs will take you up past the panoramic window through
+                                which you catch sight of the indoor swimming pool. </p>
+                            <p class="xmasListingLabel"> XMAS LISTING </p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="propertyCard newProperty">
+                    <div><img src="/shared-files/images/simpsons-house.jpg" class="propertyImage" width="325px"
+                            height="216px" /></div>
+                    <div>
+                        <p class="propertyPrice"> £500,000 </p>
+                        <p class="propertyAddress"> Evergreen Terrace </p>
+                        <p> Located in Springfield, this property is perfect for a family. With four bedroom and a
+                            spacious
+                            garden you wouldnt want to miss the chance to view this home. The property is walking
+                            distance
+                            to the Kwik-E-Mart and Moes Bar, you couldnt get better than that!</p>
+                        <p class="newListingLabel"> NEW LISTING </p>
+                    </div>
+                </div>
+
+                <div class="propertyCard oldButLit">
+                    <div>
+                        <img src="/shared-files/images/white house.jpg" class="propertyImage" width="325px" />
+                        <img src="/shared-files/images/oldbutlit.gif" class="propertyImage" width="325px"
+                            height="216px" />
+                    </div>
+                    <div>
+                        <p class="propertyPrice"> £1,000,000 </p>
+                        <p class="propertyAddress">Pensylvania Avenue</p>
+                        <p> Become the president of the United States and live in The White House. </p>
+                    </div>
+                </div>
+
+
+                <h1 id="properties_to_rent"> <img src="/shared-files/images/Properties-to-rent.png" height="75px" />
+                </h1>
+                <a href="/property-details" class="detailsLink">
+                    <div class="propertyCard christmasHome">
+                        <div><img src="/shared-files/images/buckingham palace.jpg" class="propertyImage"
+                                width="325px" />
+                        </div>
+                        <div>
+                            <p class="propertyPrice"> £5,000 PCM </p>
+                            <p class="propertyAddress">Buckingham Palace </p>
+                            <p> Buckingham Palace is the official residence and administrative headquarters of the
+                                British monarch and has been so since the accession to the throne of Queen Victoria in
+                                1837.
+                                The palace as it is today comprises more than 600 rooms and has been built around a
+                                country house originally designed for the Duke of Buckingham in 1705. </p>
+                            <p class="xmasListingLabel"> XMAS LISTING </p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="propertyCard newProperty">
+                    <div><img src="/shared-files/images/edinburgh.jpg" class="propertyImage" width="325px"
+                            height="216px" /></div>
+                    <div>
+                        <p class="propertyPrice"> £650 PCM </p>
+                        <p class="propertyAddress"> Edinburgh Castle </p>
+                        <p> Edinburgh Castle, stronghold that was once the residence of Scottish monarchs and now serves
+                            mostly as a museum. It stands 443 feet (135 metres) above sea level and overlooks the city
+                            of Edinburgh from a volcanic crag called Castle Rock. Castle Rock has been the site of human
+                            activity for at least 3,000 years.</p>
+                        <p class="newListingLabel"> NEW LISTING </p>
+                    </div>
+                </div>
+
+                <div class="propertyCard oldButLit">
+                    <div>
+                        <img src="/shared-files/images/disney.jpg" class="propertyImage" width="325px" />
+                        <img src="/shared-files/images/oldbutlit.gif" class="propertyImage" width="325px"
+                            height="216px" />
+                    </div>
+                    <div>
+                        <p class="propertyPrice"> £1,000 PCM </p>
+                        <p class="propertyAddress">Cinderella Castle</p>
+                        <p> At 189 feet high, Cinderella Castle can be seen from two miles away and it is the tallest
+                            building in the Magic Kingdom. Cinderella's Castle was inspired by Neuschwanstein Castle in
+                            Bavaria and many French designs such as the Palace of Versailles, Fontainebleau, and the
+                            chateaus of Chambord, Chaumont, and Chenonceau. </p>
+                    </div>
+                </div>
+
+                <h1 id="overseas_properties"> <img src="/shared-files/images/Overseas-properties.png" height="60px" />
+                </h1>
+
+                <a href="/property-details" class="detailsLink">
+                    <div class="propertyCard christmasHome">
+                        <div><img src="/shared-files/images/love island.jpg" class="propertyImage" width="325px"
+                                height="216px" /> </div>
+                        <div>
+                            <p class="propertyPrice"> €150,000 </p>
+                            <p class="propertyAddress">Love Island Villa </p>
+                            <p> For Sale: Classical Spanish style villa, located in the residential area of La Guardia
+                                Park, with shops and various restaurants within walking distance. Constructed over a
+                                single level, on a flat plot, this villa is distributed in the following manner;
+                                entrance hall leading off to the bedrooms, all 3 bedrooms have fitted wardrobes and are
+                                of generous proportions, 2 bathrooms, one of which is en-suite </p>
+                            <p class="xmasListingLabel"> XMAS LISTING </p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="propertyCard newProperty">
+                    <div><img src="/shared-files/images/shack-potrero.jpg" class="propertyImage" width="325px"
+                            height="216px" /></div>
+                    <div>
+                        <p class="propertyPrice"> €500,000 </p>
+                        <p class="propertyAddress"> The Shack</p>
+                        <p>A shack is a small, rundown building used as a shelter. To shack is to live somewhere. If you
+                            tell your parents you want to shack up with your best friend, prepare to get grounded. A
+                            shack is a tiny, crude shelter that one person might be living in.
+                        </p>
+                        <p class="newListingLabel"> NEW LISTING </p>
+                    </div>
+                </div>
+
+                <div class="propertyCard oldButLit">
+                    <div>
+                        <img src="/shared-files/images/Versace_mansion_-_casa_casuarina.jpg" class="propertyImage"
+                            width="325px" />
+                        <img src="/shared-files/images/oldbutlit.gif" class="propertyImage" width="325px"
+                            height="216px" />
+                    </div>
+                    <div>
+                        <p class="propertyPrice"> €1,000,000 </p>
+                        <p class="propertyAddress"> Versace's House</p>
+                        <p> Live like the famous designer in Versace's former house. </p>
+                    </div>
+                </div>
+                <h1 id="new_homes"> <img src="/shared-files/images/New-homes-for-sale.png" height="90x" /></h1>
+                <a href="/property-details" class="detailsLink">
+                    <div class="propertyCard christmasHome">
+                        <div><img src="/shared-files/images/new home 1.jpg" class="propertyImage" width="325px"
+                                height="216px" />
+                        </div>
+                        <div>
+                            <p class="propertyPrice"> £500,000 </p>
+                            <p class="propertyAddress">Sea Coast </p>
+                            <p> Relax on the private terrace of your luxury penthouse with panoramic views of the blue
+                                Mediterranean Sea and enjoy a chilled glass of champagne before a delicious al fresco
+                                dinner with friends; enjoy a leisurely swim on your private beach before climbing the
+                                steps carved into the rock face to reach your stunning villa perched on the cliff top
+                                overlooking the sea; while away a lazy afternoon sunbathing on the roof terrace of your
+                                whitewashed stone house overlooking the harbour of a small fishing village and watch the
+                                sun slowly set on a sparkling blue sea.</p>
+                            <p class="xmasListingLabel"> XMAS LISTING </p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="propertyCard newProperty">
+                    <div><img src="/shared-files/images/new home 2.jpg" class="propertyImage" width="325px"
+                            height="216px" /></div>
+                    <div>
+                        <p class="propertyPrice"> £600,000 </p>
+                        <p class="propertyAddress"> Green House </p>
+                        <p> LA greenhouse (also called a glasshouse, or, if with sufficient heating, a hothouse) is a
+                            structure with walls and roof made chiefly of transparent material, such as glass, in which
+                            plants requiring regulated climatic conditions are grown.[1] These structures range in size
+                            from small sheds to industrial-sized buildings. A miniature greenhouse is known as a cold
+                            frame. The interior of a greenhouse exposed to sunlight becomes significantly warmer than
+                            the external temperature, protecting its contents in cold weather.</p>
+                        <p class="newListingLabel"> NEW LISTING </p>
+                    </div>
+                </div>
+
+                <div class="propertyCard oldButLit">
+                    <div>
+                        <img src="/shared-files/images/new home 3.jpg" class="propertyImage" width="325px" />
+                        <img src="/shared-files/images/oldbutlit.gif" class="propertyImage" width="325px"
+                            height="216px" />
+                    </div>
+                    <div>
+                        <p class="propertyPrice"> £1,000,000 </p>
+                        <p class="propertyAddress">Project X</p>
+                        <p> An elegant beautifully refurbished interior designed detached home (932.2 sq m/10,035 sq ft)
+                            originally built in accommodation with a lift serving all floors, a carriage drive way and a
+                            rear garden with direct access to magnificent, extensive communal gardens.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <a href="/property-details" class="detailsLink" id="propertyCardTemplate" style="display: none;" >
+            <div class="propertyCard">
+                <div><img src="" class="propertyImage" width="325px" />
+                </div>
+                <div>
+                    <p class="propertyPrice">  </p>
+                    <p class="propertyAddress"> </p>
+                    <p class="propertySummary"> </p>
+                </div>
+            </div>
+        </a>
+
+        <style type="text/css">
+            * {
+                cursor: url(http://cur.cursors-4u.net/holidays/hol-5/hol423.cur), auto !important;
+            }
+        </style><a href="http://www.cursors-4u.com/cursor/2011/12/07/raspberry-candy-cane.html" target="_blank"
+            title="Raspberry Candy Cane"><img src="http://cur.cursors-4u.net/cursor.png" border="0"
+                alt="Raspberry Candy Cane" style="position:absolute; top: 0px; right: 0px;" /></a>
+
+        <script src="/pages/search-results/javascript.js"></script>
+</body>
+
+</html>
