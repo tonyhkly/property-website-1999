@@ -1,10 +1,8 @@
-# Property Website 1999
+# Property Website 1999 Hackathon Project
 
-## 1. Open up a terminal window (command prompt):
+I took part in a work hackathon project with the aim of creating the tackiest and headache inducing  property website that has ever been made. We created a website with a theme of 1999 so lots of bright colours and gifs are involved. 
 
-## 2. In the terminal, navigate to the property-website-1999 folder
-
-## 3. Run these commands in the terminal:
+The team was made up of 3 engineers and 7 progamming newbies from various parts of the company including Customer Support and Business Analysis.
 
 ### Install 3rd party javascript libraries:
 
@@ -15,16 +13,4 @@ npm install
 ### Start the application:
 ```
 npm start
-```
-
-When you aren't using the app anymore, you should definitiely stop the app from running otherwise it will be using up battery:
-
-### Stop the application:
-1. Click into the terminal window where you are running the app 
-1. Type 'ctrl + c' You should now notice that the page running the webpage is now dead
-
-
-### (git pull) Update your the code on your machine with the latest code:
-```
-git pull
 ```
