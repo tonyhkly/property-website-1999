@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const port = 80;
+const port = process.env.PORT || 5000;
 
 app.use('/shared-files', express.static(path.resolve(__dirname, '../shared-files')));
 app.use('/pages', express.static(path.resolve(__dirname, '../pages')));
