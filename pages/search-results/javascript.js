@@ -15,6 +15,10 @@ $("body").mousemove(function (event) {
     });
 });
 
+function openAboutPage() {
+    window.open('/about', '_self');
+}
+
 async function search() {
     console.log('search....');
     const searchLocation = document.querySelector('.searchLocation');
@@ -26,7 +30,7 @@ async function search() {
     const result = await response.json();
 
     console.log(result);
-    
+
     console.log('doing property content');
     const propertyList = document.querySelector('.content');
     propertyList.innerHTML = `<h1 class='resultTitle'>${result.searchParametersDescription}</h1>`;
@@ -37,7 +41,7 @@ async function search() {
 
         const propertyCard = propertyCardTemplate.cloneNode(true);
         propertyCard.style.display = "block";
-        
+
         console.log('doing property image');
         const propertyImage = propertyCard.querySelector('.propertyImage');
         propertyImage.src = property.propertyImages.mainImageSrc;
