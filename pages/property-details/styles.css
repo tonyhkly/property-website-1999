@@ -363,7 +363,6 @@
   flex-basis: 20%;  
 }
 
-
  .sale {
      width: 180px;
      height: 180px;
@@ -382,4 +381,18 @@
 }
 .ryu {
   margin-left: -65px;
+}
+.chunli {
+  width: 165px;
+  margin-left: -17px;
+  margin-top: 15px;
+}
+.pika {
+  margin-top: 5px;
+  margin-left: 0;
+  width: 175px;
+}
+.savedbythebell {
+  margin-left: 0;
+  width: 175px;
 }
