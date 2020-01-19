@@ -16,6 +16,7 @@ app.get('/404', (req, res) => res.sendFile(path.resolve(__dirname, '../pages/404
 app.get('/example', (req, res) => res.sendFile(path.resolve(__dirname, '../pages/example-page/index.html')));
 app.get('/property-details-popup', (req, res) => res.sendFile(path.resolve(__dirname, '../pages/property-details/popup.html')));
 app.get('/searching-redirect', (req, res) => res.sendFile(path.resolve(__dirname, '../pages/searching-redirect/index.html')));
+app.get('/about', (req, res) => res.sendFile(path.resolve(__dirname, '../pages/about/index.html')));
 app.get('/robots.txt', (req, res) => res.sendFile(path.resolve(__dirname, '../robots.txt')));
 
 app.get('/*', (req, res) => res.sendFile(path.resolve(__dirname, '../pages/404/index.html')));
