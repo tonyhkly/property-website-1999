@@ -13,7 +13,7 @@ margin: 0 auto;
 .sidebar {
     background: url('/shared-files/images/balls.gif');
     flex-basis: 25%;
-    font-family: 'Comic Sans MS';
+    font-family: 'Chalkduster';
     text-align: center;
     position: relative;
     font-size: 20px;
@@ -21,6 +21,30 @@ margin: 0 auto;
 
 .sidebar a {
   color: #FF00FF;
+}
+
+.sidebar .menu-list {
+  margin-right: 30px;
+}
+
+.sidebar .menu-list li {
+  margin-bottom: 20px;
+}
+
+.sidebar .menu-list li:first-child {
+  margin-top: 40px;
+}
+
+.first-loading-gif {
+  margin-top: 40px;
+}
+
+.nav-image {
+  width: 220px
+}
+
+.pika {
+  margin-top: -5px;
 }
 
 .main {
@@ -36,10 +60,6 @@ margin: 0 auto;
     font-size: 40;
     font-family: 'Times New Roman', Times, serif;
     color: white
-}
-
-.header-image {
-    width: 100%;
 }
 
 .form-inputset {
@@ -72,13 +92,24 @@ margin: 0 auto;
 .white {color:white}
 .pink {color: pink;}
 
+.header-image {
+  width: 88%;
+}
 
 .about-us-title {
-  margin-top: 30px;
+  margin-left: 10px;
+
+  border: 10px solid transparent;
+  border-image:url('/shared-files/images/neonborder3.gif') round 30;
 }
 
 .the-team-title {
+  margin-top: 20px;
   margin-bottom: 10px;
+
+  margin-left: 10px;
+  border: 10px solid transparent;
+  border-image:url('/shared-files/images/neonborder4.gif') round 30;
 }
 
 .scrollbar

@@ -6,7 +6,7 @@
     <title>Property Website 1999</title>
     <link rel="stylesheet" type="text/css" href="/shared-files/styles/generic.css">
     <link rel="stylesheet" type="text/css" href="/pages/about/styles.css">
-    <link rel="stylesheet" type="text/css" href="/pages/about/clippy.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/shared-files/styles/clippy.css" media="all">
 
     <link rel="shortcut icon" href="/shared-files/images/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="apple-touch-icon" href="/shared-files/images/favicon.ico">
@@ -20,21 +20,25 @@
         <div class="sidebar">
 
             <img class="shrink" height=70px src="/shared-files/images/logo.png">
-
             <ul class="menu-list">
                 <li> <a href="/">Homepage </a> </li>
                 <li> <a href="/search-results"> search Results </a> </li>
                 <li> <a href="/property-details"> Property details </a></li>
+                <li> <a href="/contact-agent"> Contact Agent </a></li>
                 <li> <a href="/about"> About Us </a></li>
                 <li> <a href="/search-results"> The Bacon butty </a> </li>
                 <li> <a href="/"> Nicest Fireplaces in Kent </a> </li>
             </ul>
             <br>
-            <img src="/shared-files/images/loading.gif" />
+            <img class="nav-image char" src="/shared-files/images/char.gif" />
             <br>
+            <img class="nav-image goku" src="/shared-files/images/goku.gif" />
 
         </div>
         <div class="main">
+            <marquee behavior="scroll" direction="left">
+                <img src="/shared-files/images/pika2.gif" width="150">
+            </marquee>
             <img class="header-image about-us-title" src="/shared-files/images/about-us-title.png">
 
             <p class="text">
@@ -62,7 +66,7 @@
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 
     <!-- Clippy.js -->
-    <script src="/pages/about/clippy.min.js"></script>
+    <script src="/shared-files/javascripts/clippy.min.js"></script>
     <!-- Init script -->
     <script type="text/javascript">
         clippy.load('Clippy', function (agent) {
