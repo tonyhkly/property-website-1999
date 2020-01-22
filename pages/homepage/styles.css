@@ -19,6 +19,15 @@ min-height:100vh;
     display: flex;
     flex-direction: column;
 }
+
+.sidebar-links {
+  margin-top: 30px;
+}
+
+.submit-search {
+  font-size: 13px;
+}
+
 .main {
   padding-top:70px;  
   flex-basis: 80%;
