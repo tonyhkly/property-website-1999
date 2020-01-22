@@ -2,6 +2,11 @@ h1 {
     color: black;
 }
 
+.main-logo {
+  border: 6px solid transparent;
+  border-image:url('/shared-files/images/neonborder3.gif') round 30;
+}
+
 .blink {background: #ccc;}
 @-webkit-keyframes blink {
     from { color: green; }
