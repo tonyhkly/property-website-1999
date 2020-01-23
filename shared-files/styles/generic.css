@@ -5,6 +5,11 @@ h1 {
 .main-logo {
   border: 6px solid transparent;
   border-image:url('/shared-files/images/neonborder3.gif') round 30;
+  -webkit-border-image: url('/shared-files/images/neonborder3.gif') round 30; /* Safari 5 */
+  -o-border-image: url('/shared-files/images/neonborder3.gif')  round 30; /* Opera */
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
 }
 
 .blink {background: #ccc;}
