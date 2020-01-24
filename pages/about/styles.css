@@ -100,6 +100,8 @@ margin: 0 auto;
 
   border: 10px solid transparent;
   border-image:url('/shared-files/images/neonborder3.gif') round 30;
+  -webkit-border-image: url('/shared-files/images/neonborder3.gif') round 30; /* Safari 5 */
+  -o-border-image: url('/shared-files/images/neonborder3.gif')  round 30; /* Opera */
 }
 
 .the-team-title {
@@ -109,6 +111,8 @@ margin: 0 auto;
   margin-left: 10px;
   border: 10px solid transparent;
   border-image:url('/shared-files/images/neonborder4.gif') round 30;
+  -webkit-border-image: url('/shared-files/images/neonborder4.gif') round 30; /* Safari 5 */
+  -o-border-image: url('/shared-files/images/neonborder4.gif')  round 30; /* Opera */
 }
 
 .scrollbar
